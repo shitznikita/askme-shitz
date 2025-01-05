@@ -1,0 +1,22 @@
+{% extends 'layouts/base-no-avatar.html' %}
+{% load static %}
+
+{% block content %}
+    {% include 'layouts/question.html' with question=item %}
+
+    <hr class="my-4 border-3">
+
+    <div class="answer-cards d-flex flex-column gap-3">
+        {% include 'layouts/answer.html' %}
+        {% include 'layouts/answer.html' %}
+    </div>
+
+    <hr class="my-4 border-3">
+
+    <form id="answerForm" class="d-flex flex-column gap-3">
+        <div>
+            <textarea class="form-control" id="answer" rows="4" placeholder="Enter your answer here..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Answer</button>
+    </form>
+{% endblock %}

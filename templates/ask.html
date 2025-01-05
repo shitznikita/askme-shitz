@@ -1,0 +1,44 @@
+{% extends 'layouts/base-no-avatar.html' %}
+{% load static %}
+
+{% block header %}
+    <h1>New Question</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form class="d-flex flex-column gap-3">
+            <div id="error-message" class="alert alert-danger" role="alert">
+                Incorrect question
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label for="questionTitle" class="form-label">Title</label>
+                </div>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="questionTitle" placeholder="Enter question title" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="questionBody" class="form-label">Text</label>
+                </div>
+                <div class="col-10">
+                    <textarea class="form-control" id="questionBody" rows="5" placeholder="Describe your question" required></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label for="questionTags" class="form-label">Tags</label>
+                </div>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="questionTags" placeholder="Add tags (comma separated)" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Ask!</button>
+        </form>
+    </div>
+{% endblock %}

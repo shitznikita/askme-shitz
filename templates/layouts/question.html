@@ -1,0 +1,30 @@
+{% load static %}
+<div class="card w-100" style="width: 18rem;">
+  <div class="card-body">
+      <div class="row">
+          <div class="col-2 d-flex flex-column gap-2 align-items-center">
+              <img src="./../static/img/Heisenberg.jpeg" alt="Avatar" style="width: 100px; height: 100px;">
+              <input type="number" value="5" class="mt-auto" style="width: 100px;">
+          </div>
+          <div class="col d-flex flex-column gap-2">
+              <h5 class="card-title"><a href="{% url 'one_question' question.id %}">{{ question.title }}</a></h5>
+              <p class="card-text">{{ question.text }}</p>
+              <div class="d-flex gap-3 mt-auto">
+                  <a href="#" class="card-link">Answer (3)</a>
+                  <div class="d-flex gap-2">
+                      Tags:
+                      <a href="#">link</a>
+                      <a href="#">link</a>
+                      <a href="#">link</a>
+                      <a href="#">link</a>
+                      <a href="#">link</a>
+                  </div>
+              </div>
+              <div class="mt-auto">
+                  <button id="like" class="btn btn-success btn-sm">👍</button>
+                  <button id="dislike" class="btn btn-danger btn-sm">👎</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
